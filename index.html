@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SERDA MX — All In One Digital Platform</title>
+<style>
+:root{--gold:#f5c64d;--bg:#050505;--line:#89631b}*{box-sizing:border-box}
+body{margin:0;background:#050505;color:#eee;font-family:Arial,sans-serif}
+header{display:flex;align-items:center;gap:18px;padding:15px 20px;background:linear-gradient(100deg,#080808,#211707,#080808);border-bottom:1px solid #735315}
+.logo{font-size:25px;font-weight:900;font-style:italic;color:var(--gold);text-shadow:0 0 12px #e6a51b}
+.search{flex:1;max-width:500px;background:#111;border:1px solid #69501e;border-radius:25px;padding:11px;color:white}
+.user{margin-left:auto}.layout{display:grid;grid-template-columns:180px 1fr;min-height:calc(100vh - 60px)}
+aside{padding:15px 10px;background:#090909;border-right:1px solid #634916}
+.nav{display:block;width:100%;text-align:left;padding:12px 10px;margin:3px 0;background:none;border:0;border-radius:8px;color:#eee;cursor:pointer}
+.nav.active,.nav:hover{background:linear-gradient(90deg,#805910,#211707);color:#ffe08a}
+main{padding:15px;min-width:0;background:radial-gradient(ellipse at 80% 0%,#5d3b1533,transparent 40%),#050505}
+.hero{height:260px;border:1px solid #ad7e20;border-radius:13px;position:relative;overflow:hidden;padding:30px;background:linear-gradient(110deg,#211706,#070707 58%,#4b2e0b)}
+.hero:after{content:"♛";position:absolute;right:8%;bottom:-45px;font-size:230px;color:#d69b2940;text-shadow:0 0 25px #e7a81e}
+h1{font-size:clamp(34px,5vw,58px);font-style:italic;color:#ffda68;margin:5px 0;text-shadow:0 0 15px #b47a13}
+.tag{font-size:clamp(15px,2vw,23px);font-weight:bold;color:#ffe08a}.goldbtn{background:linear-gradient(#ffe58c,#d99a17);border:1px solid #fff0b0;color:#171000;padding:10px 19px;border-radius:9px;font-weight:bold;cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin:13px 0;background:#100d07;border:1px solid #745417;border-radius:12px;padding:13px 0}
+.stat{text-align:center;border-right:1px solid #59431a}.stat:last-child{border:0}.stat b{display:block;color:#ffdc70;font-size:21px}.stat small{color:#bbb}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.feature{border:1px solid #98701e;border-radius:12px;padding:15px 10px;background:linear-gradient(135deg,#2a1d08,#090909);min-height:95px;cursor:pointer}
+.feature strong{display:block;color:#ffdc70;margin-bottom:7px}.feature span{font-size:25px;margin-right:7px}.feature small{color:#bbb}
+.twocol,.lower{display:grid;grid-template-columns:1.1fr .9fr;gap:12px;margin-top:13px}.panel{background:linear-gradient(145deg,#171106,#080808);border:1px solid #89631b;border-radius:12px;padding:14px;min-width:0}
+h3{color:#ffdc70;margin:0 0 12px}.games{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.game{background:#090909;border:1px solid #705319;border-radius:10px;text-align:center;padding:12px 5px}.art{font-size:35px;padding:10px}.game button{margin-top:9px;background:#251a08;color:#ffdb69;border:1px solid #a87c20;border-radius:20px;padding:6px 10px;cursor:pointer}
+.activity{padding:11px 3px;border-bottom:1px solid #382a12}.community{padding:20px;border:1px solid #9c711b;border-radius:12px;background:linear-gradient(100deg,#392608,#090909)}
+.page{display:none}.page.active{display:block}.post{padding:15px;margin:12px 0;border:1px solid #705319;border-radius:12px;background:#0c0c0c}.post p{color:#ccc}.post a{display:inline-block;background:linear-gradient(#ffe58c,#d99a17);padding:10px 16px;border-radius:8px;color:#171000;text-decoration:none;font-weight:bold}
+.post button{background:#171006;border:1px solid #89631b;color:#ffdb69;padding:8px;border-radius:8px;margin:10px 5px 0 0;cursor:pointer}
+input,textarea{background:#111;color:white;border:1px solid #745417;border-radius:8px;padding:10px;width:100%;margin:6px 0}
+.mobile{display:none}.foot{padding:15px;border-top:1px solid #705319;color:#aaa;font-size:12px;display:flex;justify-content:space-between}
+@media(max-width:760px){.layout{grid-template-columns:135px 1fr}.features{grid-template-columns:repeat(2,1fr)}.twocol,.lower{grid-template-columns:1fr}}
+@media(max-width:560px){header{padding:12px}.search{display:none}.logo{font-size:20px}.layout{display:block}aside{display:none}main{padding:9px 9px 70px}.hero{height:205px;padding:18px}.hero:after{font-size:150px;right:0}h1{font-size:35px}.tag{font-size:14px}.stats{grid-template-columns:repeat(3,1fr)}.stat:last-child{display:none}.stat b{font-size:16px}.features{gap:7px}.feature{padding:10px 7px;min-height:80px}.feature small{font-size:10px}.games{gap:5px}.art{font-size:28px}.game button{font-size:10px;padding:5px}.mobile{display:flex;position:fixed;bottom:0;left:0;right:0;background:#090909;border-top:1px solid #a87918;justify-content:space-around;padding:9px 0;z-index:10}.mobile button{background:none;border:0;color:#ffdc70;font-size:11px;cursor:pointer}.foot{font-size:10px}}
+</style>
+</head>
+<body>
+<header><div class="logo">♛ SERDA MX</div><input class="search" id="search" placeholder="⌕ Cari fitur, game, komunitas..."><div class="user">🔔　👤 <span id="username">Guest</span></div></header>
+<div class="layout"><aside>
+<button class="nav active" data-view="home">⌂　Beranda</button><button class="nav" data-view="games">🎮　Game Center</button><button class="nav" data-view="social">◉　Sosial Media</button><button class="nav" data-view="community">👥　Komunitas</button><button class="nav" data-view="chat">💬　Live Chat</button><button class="nav" data-view="activity">♧　Pusat Aktivitas</button><button class="nav" data-view="profile">♙　Profil</button><button class="nav" data-view="settings">⚙　Pengaturan</button><button class="nav" data-view="admin">♛　Admin Panel</button><button class="nav" data-view="owner">💎　Owner Panel</button>
+</aside><main>
+<section class="page active" id="page-home">
+<div class="hero"><div style="position:relative;z-index:2"><div style="font-size:35px">♛</div><h1>SERDA MX</h1><div class="tag">ALL IN ONE DIGITAL PLATFORM</div><p>Play • Connect • Share • Explore</p><button class="goldbtn" data-go="social">Mulai Sekarang ❯</button></div></div>
+<div class="stats"><div class="stat"><b>253K+</b><small>Pengguna Aktif</small></div><div class="stat"><b>120+</b><small>Game Tersedia</small></div><div class="stat"><b>99.9%</b><small>Uptime Server</small></div><div class="stat"><b>1M+</b><small>Prestasi</small></div></div>
+<div class="features"><div class="feature" data-go="games"><strong><span>🎮</span>Game Center</strong><small>Mainkan berbagai game seru!</small></div><div class="feature" data-go="community"><strong><span>👥</span>Komunitas</strong><small>Bergabung dan perluas jaringan!</small></div><div class="feature" data-go="chat"><strong><span>💬</span>Live Chat</strong><small>Hubungi admin dengan mudah!</small></div><div class="feature" data-go="social"><strong><span>⭐</span>Sosial Media</strong><small>Bagikan momen dan kabar terbaru!</small></div></div>
+<div class="twocol"><div class="panel"><h3>🎮 GAME CENTER</h3><div class="games"><div class="game"><div class="art">⭕❌</div><b>Tic Tac Toe</b><br><button data-game="Tic Tac Toe">Mainkan</button></div><div class="game"><div class="art">🔢</div><b>Tebak Angka</b><br><button data-game="Tebak Angka">Mainkan</button></div><div class="game"><div class="art">🐍</div><b>Snake Mini</b><br><button data-game="Snake Mini">Mainkan</button></div></div></div><div class="panel"><h3>♧ PUSAT AKTIVITAS</h3><div class="activity">🔔　Selamat datang di SERDA MX</div><div class="activity">▣　Postingan komunitas terbaru</div><div class="activity">🏆　Event Game Online</div></div></div>
+<div class="lower"><div class="community"><h3>♛ KOMUNITAS RESMI</h3><p>Gabung dan dapatkan informasi terbaru!</p><a class="goldbtn" href="https://whatsapp.com/channel/0029Vb9fXv10G0XkTju7hM13" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none">Gabung Sekarang ❯</a></div><div class="panel"><h3>💬 LIVE CHAT</h3><p>Hubungi admin melalui pilihan berikut:</p><a href="https://wa.me/6281274954283" target="_blank" rel="noopener" style="color:#8de5a0">🟢 WhatsApp Admin</a><p><button class="nav" data-go="chat">💬 Chat Server Website ❯</button></p></div></div>
+</section>
+<section class="page" id="page-social"><h2 style="color:#ffdc70">⭐ SOSIAL MEDIA</h2><div class="panel"><h3>Buat Postingan</h3><textarea id="newpost" rows="3" placeholder="Apa yang sedang kamu pikirkan?"></textarea><button class="goldbtn" id="addpost">Posting</button></div>
+<article class="post" id="danapost"><b>♛ SERDA MX</b><h3 id="danatitle">DANA Kaget</h3><p id="danadesc">Lihat tautan postingan berikut.</p><a href="https://daget-id.vercel.app/danakaget%3Fc%3Dsxjsj4pk6%26r%3DfnjJVJ%26orderId%3D/20260501133214758015010300166699976206899.html" target="_blank" rel="noopener noreferrer">Buka Postingan ❯</a><br><button id="editpost">✎ Edit Postingan</button><button id="deletepost">Hapus</button></article><div id="posts"></div>
+</section>
+<section class="page" id="page-games"><h2 style="color:#ffdc70">🎮 GAME CENTER</h2><p>Pilih game untuk bermain. Login diperlukan sebelum bermain.</p><div class="games"><div class="game">⭕❌<p>Tic Tac Toe</p><button data-game="Tic Tac Toe">Mainkan</button></div><div class="game">🔢<p>Tebak Angka</p><button data-game="Tebak Angka">Mainkan</button></div><div class="game">🐍<p>Snake Mini</p><button data-game="Snake Mini">Mainkan</button></div></div><div class="panel" id="gamebox" style="margin-top:12px">Pilih game untuk memulai.</div></section>
+<section class="page" id="page-community"><div class="panel"><h2 style="color:#ffdc70">👥 KOMUNITAS SERDA MX</h2><p>Bergabung dengan komunitas resmi kami.</p><a class="goldbtn" href="https://whatsapp.com/channel/0029Vb9fXv10G0XkTju7hM13" target="_blank" rel="noopener">Gabung Komunitas</a></div></section>
+<section class="page" id="page-chat"><div class="panel"><h2 style="color:#ffdc70">💬 LIVE CHAT</h2><p>Hubungi admin melalui WhatsApp atau chat server.</p><p><a href="https://wa.me/6281274954283" target="_blank" rel="noopener" style="color:#8de5a0">🟢 WhatsApp Admin</a></p><div id="chatlog" class="post">Chat demo — pesan hanya tampil di browser ini.</div><input id="chatinput" placeholder="Tulis pesan..."><button class="goldbtn" id="send">Kirim</button></div></section>
+<section class="page" id="page-activity"><div class="panel"><h2 style="color:#ffdc70">♧ PUSAT AKTIVITAS</h2><p>🔔 Selamat datang di SERDA MX</p><p>▣ Postingan komunitas terbaru</p><p>🏆 Event Game Online</p></div></section>
+<section class="page" id="page-profile"><div class="panel"><h2 style="color:#ffdc70">♙ PROFIL</h2><p id="profileuser">Guest</p><button class="goldbtn" id="login">Login / Daftar</button></div></section>
+<section class="page" id="page-settings"><div class="panel"><h2 style="color:#ffdc70">⚙ PENGATURAN</h2><p>Pengaturan akun dan keamanan.</p></div></section>
+<section class="page" id="page-admin"><div class="panel"><h2 style="color:#ffdc70">♛ ADMIN PANEL</h2><p>Panel admin memerlukan verifikasi hak akses dari backend.</p></div></section>
+<section class="page" id="page-owner"><div class="panel"><h2 style="color:#ffdc70">💎 OWNER PANEL</h2><p>Panel Owner memerlukan verifikasi hak akses dari backend.</p></div></section>
+</main></div>
+<nav class="mobile"><button data-go="home">⌂<br>Beranda</button><button data-go="games">🎮<br>Game</button><button data-go="social">⭐<br>Sosial</button><button data-go="chat">💬<br>Chat</button><button data-go="profile">♙<br>Akun</button></nav>
+<div class="foot"><span>© SERDA MX</span><span>ALL IN ONE DIGITAL PLATFORM</span></div>
+<script>
+(()=>{let logged=false,answer=0;const $=s=>document.querySelector(s);
+function go(name){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));$('#page-'+name)?.classList.add('active');document.querySelectorAll('.nav[data-view]').forEach(n=>n.classList.toggle('active',n.dataset.view===name))}
+document.addEventListener('click',e=>{let g=e.target.closest('[data-go]');if(g){go(g.dataset.go);return}let n=e.target.closest('[data-view]');if(n){go(n.dataset.view);return}let game=e.target.closest('[data-game]');if(game){if(!logged){let email=prompt('Email untuk login demo');if(!email)return;let pass=prompt('Password demo');if(!pass)return;logged=true;$('#profileuser').textContent=email;$('#login').textContent='Sudah Login'}let name=game.dataset.game,box=$('#gamebox');if(name==='Tebak Angka'){answer=Math.floor(Math.random()*10)+1;box.innerHTML='<h3>Tebak Angka 1–10</h3><input id="guess" type="number" min="1" max="10"><button class="goldbtn" id="check">Tebak</button><p id="result"></p>'}else box.textContent=name+' dipilih. Modul permainan penuh belum diaktifkan.'}});
+$('#addpost').onclick=()=>{let t=$('#newpost');if(!t.value.trim())return;let card=document.createElement('article');card.className='post';let p=document.createElement('p');p.textContent=t.value;card.append(p);$('#posts').prepend(card);t.value=''};
+$('#editpost').onclick=()=>{let a=prompt('Judul postingan',$('#danatitle').textContent);if(a===null)return;let b=prompt('Deskripsi postingan',$('#danadesc').textContent);if(b===null)return;$('#danatitle').textContent=a;$('#danadesc').textContent=b};
+$('#deletepost').onclick=()=>{if(confirm('Hapus postingan dari preview?'))$('#danapost').remove()};
+$('#login').onclick=()=>{let e=prompt('Email login demo');if(e){logged=true;$('#profileuser').textContent=e;$('#login').textContent='Sudah Login'}};
+$('#send').onclick=()=>{let t=$('#chatinput');if(!t.value.trim())return;let p=document.createElement('p');p.textContent='Guest: '+t.value;$('#chatlog').append(p);t.value=''};
+$('#gamebox').onclick=e=>{if(e.target.id==='check')$('#result').textContent=Number($('#guess').value)===answer?'Benar!':'Belum tepat, coba lagi.'};
+$('#search').addEventListener('keydown',e=>{if(e.key==='Enter'){let q=e.target.value.toLowerCase();go(q.includes('game')?'games':q.includes('chat')?'chat':q.includes('komunitas')?'community':'social')}});
+})();
+</script>
+</body></html>
